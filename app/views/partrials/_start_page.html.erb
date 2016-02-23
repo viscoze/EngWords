@@ -45,7 +45,7 @@
   </div>
 </div>
 
-<!-- Join Container -->
+<!-- Join -->
 <div id="Join" class="container-fluid text-center">
   <h1>JOIN US</h1>
   <div class="container">
@@ -55,54 +55,12 @@
        commodo consequat.
        </p>
     <div class="col-sm-offset-3">
-      <form class="form-horizontal">
-        <div class="form-group">
-          <label for="name" class="col-sm-3 control-label">
-            Your name is:
-          </label>
-          <div class="col-sm-4">
-            <input type="text" class="form-control" id="name">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email" class="col-sm-3 control-label">
-            Your e-mail is:
-          </label>
-          <div class="col-sm-4">
-            <input type="text" class="form-control" id="email">
-          </div>
-        </div>
-        <span class="h-divider"></span>
-        <div class="form-group">
-          <label for="password" class="col-sm-3 control-label">
-            Password:
-          </label>
-          <div class="col-sm-4">
-            <input type="password" class="form-control" id="password">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="password_c" class="col-sm-3 control-label">
-            Confirm your password:
-          </label>
-          <div class="col-sm-4">
-            <input type="password" class="form-control" id="password_c">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-offset-3 col-sm-3">
-            <button type="submit" class="btn btn-default btn-lg"
-                    id="submit-button">
-              <span class="glyphicon glyphicon-send"></span> Submit
-            </button>
-          </div>
-        </div>
-      </form>
+      <%= render 'partrials/signup_form' %>
     </div>
   </div>
 </div>
 
-<!-- Contact Container -->
+<!-- Contact -->
 <div id="Contact" class="container-fluid text-center">
   <h1>CONTACT</h1>
   <div class="row">
