@@ -1,4 +1,6 @@
-<form class="form-horizontal">
+<%= simple_form_for(resource, as: resource_name,
+    url: registration_path(resource_name)),
+    defaults: { input_html: { class: 'form-horizontal' } } do |f| %>
   <div class="form-group">
     <label for="name" class="col-sm-3 control-label">
       Your name is:
@@ -9,10 +11,10 @@
   </div>
   <div class="form-group">
     <label for="email" class="col-sm-3 control-label">
-      Your e-mail is:
+      Your email is:
     </label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" id="email">
+      <%= f.input :email, required: true, id: "email"%>
     </div>
   </div>
   <span class="h-divider"></span>
@@ -21,7 +23,9 @@
       Password:
     </label>
     <div class="col-sm-4">
-      <input type="password" class="form-control" id="password">
+      <%= f.input :password, required: true,
+          hint: ("#{@minimum_password_length} characters minimum" if @validatable)
+          id: "password" %>
     </div>
   </div>
   <div class="form-group">
@@ -29,7 +33,7 @@
       Confirm your password:
     </label>
     <div class="col-sm-4">
-      <input type="password" class="form-control" id="password_c">
+      <%= f.input :password_confirmation, required: true, id: "password_c"%>
     </div>
   </div>
   <div class="form-group">
@@ -40,4 +44,4 @@
       </button>
     </div>
   </div>
-</form>
+<% end %>
