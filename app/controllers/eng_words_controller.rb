@@ -1,5 +1,9 @@
 class EngWordsController < ApplicationController
 
-  def index
+  def start_page
   end
+
+  def contact
+  end
+
 end
