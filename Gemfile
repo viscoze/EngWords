@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 ruby '2.1.5'
 
 gem 'rails', '4.2.1'
-gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.4.1'
 gem 'devise', '~> 3.4.1'
@@ -18,6 +17,7 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'sqlite3'
 end
 
 group :production do
