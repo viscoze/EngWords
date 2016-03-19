@@ -28,29 +28,29 @@
           <li><a href="/contact">CONTACT</a></li>
           <% unless current_user.present? %>
             <li>
-              <a href="/users/sign_up">
+              <%= link_to new_user_registration_url do%>
                 <span class="glyphicon glyphicon-user"></span>
                 JOIN US
-              </a>
+              <% end %>
             </li>
             <li>
-              <a href="/users/sign_in">
+              <%= link_to new_user_session_url do %>
                 <span class="glyphicon glyphicon-log-in"></span>
                 ENTER
-              </a>
+              <% end %>
             </li>
           <% else %>
             <li>
-              <a href="/users">
+              <%= link_to profile_url do %>
                 <span class="glyphicon glyphicon-tasks"></span>
                 MY ACCOUNT
-              </a>
+              <% end %>
             </li>
             <li>
-              <a href="/users/sign_out" data-method="delete">
+              <%= link_to destroy_user_session_url, method: :delete do %>
                 <span class="glyphicon glyphicon-log-out"></span>
                 ESCAPE
-              </a>
+              <% end %>
             </li>
           <% end %>
         </ul>

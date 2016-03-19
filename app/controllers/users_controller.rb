@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       @user = current_user
       render 'user_page'
     else
-      redirect_to eng_words.start_page
+      redirect_to root_url
     end
   end
 
