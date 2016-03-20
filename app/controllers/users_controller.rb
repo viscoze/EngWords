@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def show
     if user_signed_in?
       @user = current_user
-      render 'user_page'
+      render component: 'UserPage', props: { user: @user }, tag: 'div'
     else
       redirect_to root_url
     end
